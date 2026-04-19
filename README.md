@@ -27,3 +27,14 @@ FROM orders;
 
 ![date plus one day](https://github.com/oslippy/goit-rdb-hw-07/blob/main/Screenshot%202026-04-19%20at%2016.25.32.png)
 
+## 3. Напишіть SQL-запит, який для таблиці `orders` для атрибута `date` відображає кількість секунд з початку відліку (показує його значення `timestamp`). Для цього потрібно знайти та застосувати необхідну функцію. На екран виведіть атрибут `id`, оригінальний атрибут `date` та результат роботи функції.
+
+~~~~sql
+SELECT
+    id,
+    date,
+    UNIX_TIMESTAMP(date) AS timestamp_seconds
+FROM orders;
+~~~~
+
+![date to unixtime](https://github.com/oslippy/goit-rdb-hw-07/blob/main/Screenshot%202026-04-19%20at%2016.30.45.png)
