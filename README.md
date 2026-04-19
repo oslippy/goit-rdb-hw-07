@@ -15,3 +15,15 @@ FROM orders;
 
 ![separated year, month, day](https://github.com/oslippy/goit-rdb-hw-07/blob/main/Screenshot%202026-04-19%20at%2016.21.11.png)
 
+## 2. Напишіть SQL-запит, який для таблиці orders до атрибута `date` додає один день. На екран виведіть атрибут `id`, оригінальний атрибут `date` та результат додавання.
+
+~~~~sql
+SELECT
+    id,
+    date,
+    DATE_ADD(date, INTERVAL 1 DAY) AS date_plus_one
+FROM orders;
+~~~~
+
+![date plus one day](https://github.com/oslippy/goit-rdb-hw-07/blob/main/Screenshot%202026-04-19%20at%2016.25.32.png)
+
