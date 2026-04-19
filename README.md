@@ -38,3 +38,14 @@ FROM orders;
 ~~~~
 
 ![date to unixtime](https://github.com/oslippy/goit-rdb-hw-07/blob/main/Screenshot%202026-04-19%20at%2016.30.45.png)
+
+## 4. Напишіть SQL-запит, який рахує, скільки таблиця `orders` містить рядків з атрибутом `date` у межах між 1996-07-10 00:00:00 та 1996-10-08 00:00:00.
+
+~~~~sql
+SELECT COUNT(*) AS orders_count
+FROM orders
+WHERE UNIX_TIMESTAMP(date) BETWEEN UNIX_TIMESTAMP('1996-07-10 00:00:00')
+                                AND UNIX_TIMESTAMP('1996-10-08 00:00:00');
+~~~~
+
+![orders count](https://github.com/oslippy/goit-rdb-hw-07/blob/main/Screenshot%202026-04-19%20at%2016.35.31.png)
